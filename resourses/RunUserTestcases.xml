@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Nop Comerce">
+ 
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+		
+	</listeners>
+
+	<test name="Run on CHROME UI">
+		<parameter name="browser" value="chrome_ui" />
+		<parameter name="url" value="https://demo.nopcommerce.com/" />
+		<parameter name="emailLogin" value="9" />
+		<classes>
+			<class name="com.nopcomerce.user.Register" />
+		</classes>
+	</test>
+<!-- <test name="Run on FIREFOX UI">
+		<parameter name="browser" value="firefox_ui" />
+		<parameter name="url" value="https://demo.nopcommerce.com/" />
+		<parameter name="emailLogin" value="342" />
+		<classes>
+			<class name="com.nopcomerce.users.Register" />
+			<class name="com.nopcomerce.users.MyAccount" />
+			<class name="com.nopcomerce.users.Login" />
+			<class name="com.nopcomerce.users.Search" />
+			<class name="com.nopcomerce.users.WishlistCompareRecentView" />
+		</classes>
+	</test>-->
+	
+
+	<!-- <test name="Run on CHROME UI">
+		<parameter name="browser" value="chrome_ui" />
+		<classes>
+			<class name="com.nopcomerce.users.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>
+
+	<test name="Run on CHROME HEADLESS">
+		<parameter name="browser" value="chrome_headless" />
+		<classes>
+			<class name="com.nopcomerce.users.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>
+
+	<test name="Run on FIREFOX HEADLESS">
+		<parameter name="browser" value="firefox_headless" />
+		<classes>
+			<class name="com.nopcomerce.users.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>
+
+	<test name="Run on EDGE CHROMIUM">
+		<parameter name="browser" value="edge_chromium" />
+		<classes>
+			<class name="com.nopcomerce.users.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>
+	
+	 <test name="Run on IE UI">
+		<parameter name="browser" value="ie_ui" />
+		<classes>
+			<class name="com.nopcomerce.users.Level_04_Register_Login_Multiple_Browser" />
+		</classes>
+	</test>-->
+
+
+</suite> 

@@ -36,7 +36,32 @@ public class AbstractTest {
 		log = LogFactory.getLog(getClass());
 	}
 
-	protected WebDriver getBrowserDriver(String browserName, String url) {
+	protected String firstName, lastName, day, month, year, email, companyName, password, passwordLow, passwordError, confirmPassword, emailNotRegister, emailError;
+	protected String country, state, city, address1, address2, zipcode, phoneNumber, faxNumber, newpassword;
+
+	protected WebDriver getBrowserDriver(String browserName, String url, String emailLogin) {
+		firstName = "Phan";
+		lastName = "Thuy";
+		day = "28";
+		month = "November";
+		year = "1998";
+		companyName = "Senda";
+		password = "28111998";
+		passwordLow = "2811";
+		confirmPassword = "281198";
+		email = "Phanthuy" + emailLogin + "@gmail.com";
+		emailError = "Phanthuy.123";
+		passwordError = "123457";
+		emailNotRegister = "Phanthuy111@gmail.com";
+		country = "Viet Nam";
+		state = "Other";
+		city = "Nghe An";
+		address1 = "Khuong Thuong, Dong da, Ha Noi";
+		address2 = "Quynh Lien,Hoang Mai, Nghe An";
+		zipcode = "28111998";
+		phoneNumber = "037540334";
+		faxNumber = "123456";
+		newpassword = "281198";
 		Browser browser = Browser.valueOf(browserName.toUpperCase());
 		if (browser == Browser.FIREFOX_UI) {
 			WebDriverManager.firefoxdriver().setup();
@@ -134,11 +159,12 @@ public class AbstractTest {
 		driver.get(url);
 		return driver;
 	}
+
 	protected int getRandomNumber() {
 		Random random = new Random();
 		return random.nextInt(999999);
 	}
-	
+
 	private boolean checkTrue(boolean condition) {
 		boolean pass = true;
 		try {
